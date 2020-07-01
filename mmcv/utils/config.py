@@ -9,7 +9,6 @@ from collections import abc
 from importlib import import_module
 
 from addict import Dict
-from yapf.yapflib.yapf_api import FormatCode
 
 from .path import check_file_exist
 
@@ -222,6 +221,7 @@ class Config:
 
     @property
     def pretty_text(self):
+        from yapf.yapflib.yapf_api import FormatCode
 
         indent = 4
 
